@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <title>Nishanthini Sankar</title>
+    <style>
+        * {
+           font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color:#0f2027;
+            margin: 0;
+            padding-top:90px;
+        }
+
+       nav {
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a:hover {
+            color: purple;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            gap: 40px;
+        }
+
+        .profile-section img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .profile-text {
+            text-align: left;
+        }
+
+        .profile-text h1 {
+            font-size: 40px;
+            color: purple;
+            margin: 0;
+        }
+
+        .profile-text h3 {
+            font-weight: normal;
+            color: white;
+            margin-top: 10px;
+        }
+
+        #about {
+            margin: 220px 100px;
+        }
+
+        #about p {
+            color: white;
+            text-align: justify;
+            line-height: 1.6;
+        }
+       .ab {
+    color: white;
+    text-align:center; /* Or white if you prefer */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.sk {
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    margin-top:50%;
+}
+
+#skills h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin:auto;
+}
+
+#skills li {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#skills li i {
+    font-size: 22px;
+}
+.bar {
+  background-color: #444;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 8px;
+  background-color:purple;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.pro{
+    margin-top:50%;
+    color:white;
+    text-align:center;
+}
+.health,
+.website,.student,.embedded {
+    width: 400px;
+    border: 2px solid white;
+    display: block;
+    margin: 40px auto;
+}
+
+.para{
+    color:white;
+    text-align:justify;
+    padding-left:10px;
+    padding-right:10px;
+}
+.button{
+    size:100px;
+}
+.head{
+    color:#B2EBF2;
+    padding-left:50px;
+    text-align:center;
+}
+#education {
+  padding: 40px;
+  background-color: #0f2027; /* dark background */
+  color: #f1f1f1;
+}
+
+#education h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white; /* accent color */
+  margin-bottom: 30px;
+}
+
+.education-box {
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+.education-box:hover {
+  transform: translateY(-4px);
+  border-color: purple;
+}
+#certificates {
+  padding: 40px;
+  background-color: #0f2027; /* dark background */
+  color: #f1f1f1;
+  margin-top:50%;
+}
+
+#certificates h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white; /* accent color */
+  margin-bottom: 30px;
+}
+
+.certi {
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+.certi:hover {
+  transform: translateY(-4px);
+  border-color: purple;
+}
+#coding-profiles {
+  padding: 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 30%;
+  min-height: 60vh; 
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.profile-card {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.codechef {
+  background-color: #5B4636;
+}
+
+.leetcode {
+  background-color: hsl(36, 47%, 64%);
+}
+#Achievements {
+  padding: 40px;
+  background-color: #111; /* dark background */
+  color: #f1f1f1;
+}
+
+#Achievements h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: white; /* accent color */
+  margin-bottom: 30px;
+}
+
+.Codechef {
+  border: 1px solid #444;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+}
+
+.Codechef:hover {
+  transform: translateY(-4px);
+  border-color: purple;
+}
+#contact {
+  padding: 3rem;
+  text-align: center;
+  color: white;
+  margin-top:50%;
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.contact-info i {
+  margin-right: 0.5rem;
+  color: #FFA500;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background-color: #FFA500;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e69500;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certifications</a></li>
+            <li><a href="#coding-profiles">Coding Profiles</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="profile-section">
+        <img src="nish.jpg" alt="Profile Picture">
+        <div class="profile-text">
+            <h1>Nishanthini Sankar</h1>
+            <h3>Aspiring FullStack Developer</h3>
+        </div>
+    </div>
+
+    <div id="about">
+        <h1 class="ab">About Me</h1>
+        <p>
+            I am Nishanthini Sankar, a passionate and results-driven Full Stack Developer with a strong foundation in Java, Spring Boot, React, and SQL. With a deep interest in building user-focused, scalable applications, I enjoy bridging the gap between clean front-end design and powerful back-end functionality. My expertise also includes HTML, CSS, JavaScript, and hands-on experience working with REST APIs and database management.
+        </p>
+        <p>
+            I recently completed my Bachelor of Engineering in Electronics and Communication Engineering with a CGPA of 8.9. During my academic journey, I undertook several impactful projects—including an AI-powered object detection system and a Java-based personal expense tracker—that helped sharpen my technical, problem-solving, and project management skills. I’ve also completed internships in both web development and embedded systems, gaining exposure to real-world challenges and collaborative development environments.
+        </p>
+        <p>
+            As a committed lifelong learner, I continuously stay updated with evolving technologies and industry best practices. I am eager to apply my skills in a dynamic, growth-oriented company where I can contribute to meaningful software solutions while further enhancing my technical and professional development.
+        </p>
+    </div>
+
+    <section id="education">
+  <h2>Education</h2>
+
+  <div class="education-box">
+    <h3>Bachelor of Engineering in the domain of Electronics and Communicationg</h3>
+    <p><strong>Vel Tech Multi Tech Dr.Rangarajan Dr.Sakunthala Engineering College</strong></p>
+    <p>2021 – 2025 | CGPA: 8.8/10</p>
+  </div>
+
+  <div class="education-box">
+    <h3>Higher Secondary School</h3>
+    <p><strong>AKT Academy Matriculation Higher Secondary School</strong></p>
+    <p>2020 – 2021 | Percentage: 89.9%</p>
+  </div>
+
+  <div class="education-box">
+    <h3>Secondary School Leaving Certificate</h3>
+    <p><strong>AKT Academy Matriculation Higher Secondary School</strong></p>
+    <p>2018 – 2019 | Percentage: 90%</p>
+  </div>
+</section>
+
+    <div id="skills">
+        <h1 class="sk">Skills</h1>
+        <h2>Frontend Technologies</h2>
+        <ul>
+            <div class="pg">
+            <li><i class="fa-brands fa-html5"></i>HTML5</li>
+            <div class="bar"><div class="progress" style="width: 95%;"></div>
+            </div>
+            <div class="pg">
+            <li><i class="fa-brands fa-css3"></i>CSS3</li>
+            <div class="bar"><div class="progress" style="width: 95%;"></div>
+            </div>
+            <div class="pg">
+            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+            <div class="bar"><div class="progress" style="width: 90%;"></div>
+            </div>
+            <div class="pg">
+            <li><i class="fa-brands fa-react"></i>React</li>
+            <div class="bar"><div class="progress" style="width: 85%;"></div>
+            </div>
+        </ul>
+        <h2>Backend Technologies</h2>
+        <ul>
+            <div class="pg">
+            <li><i class="fa-brands fa-java"></i>Java</li>
+            <div class="bar"><div class="progress" style="width: 90%;"></div>
+            </div>
+            <div class="pg">
+            <li>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" 
+       alt="Spring Boot" 
+       style="width: 24px; vertical-align: left;">
+  Spring Boot
+</li>
+<div class="bar"><div class="progress" style="width: 75%;"></div>
+</div>
+<div class="pg">
+<li><i class="fa-solid fa-database"></i>SQL</li>
+<div class="bar"><div class="progress" style="width: 90%;"></div>
+</div>
+        </ul>
+        <h2>Tools</h2>
+        <ul>
+            <li><img src="image.png" width="30px">Intellij Idea</li>
+            <li><img src="img2.webp" width="30px">VS code</li>
+            <li><img src="img3.webp" width="30px">Git hub</li>
+            <li><img src="img4.jpeg" width="30px">Eclipse</li>
+        </ul>
+    </div>
+
+    <div id="projects">
+    <h1 class="pro">Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="health">
+        <img src="proj1.jpg" width="400px" height="300px">
+        <h1 class="head">Health Tracking System</h1>
+        <p class="para">
+            Developed an all-in-one health calculator web application designed to help users assess their fitness metrics in one place. It allows users to calculate essential health indicators such as BMI (Body Mass Index), BMR (Basal Metabolic Rate), and daily calorie needs using a clean, intuitive interface. Developed using front-end technologies like HTML, CSS, and JavaScript, the project emphasizes user experience and practical utility, making it a helpful tool for individuals aiming to manage their health and wellness effectively.
+        </p>
+        <center>
+            <a href="https://nishanthinisankar.github.io/HealthMate-All-in-One-Health-Calculator-/" target="_blank">
+                <button type="button">Visit</button>
+            </a>
+        </center>
+    </div>
+    <div class="website">
+        <img src="proj2.jpg" width="400px" height="300px">
+        <h1 class="head">Fashion Store</h1>
+        <p class="para">
+            This project is a fully responsive e-commerce website frontend designed for a fashion retail brand. It simulates a real online shopping experience using HTML, CSS, and JavaScript. The homepage features a clean layout with a fixed navigation bar, promotional banners, and a dynamic product showcase.
+        </p>
+        <center>
+            <a href="https://nishanthinisankar.github.io/Fashion-Store/" target="_blank">
+                <button type="button">Visit</button>
+            </a>
+        </center>
+    </div>
+    <div class="student">
+        <img src="proj3.jpg" width="400px">
+        <h1 class="head">Student Database System</h1>
+        <p class="para">
+            A Student Database Management System (SDMS) is a software application designed to efficiently manage and organize student information such as names, roll numbers, courses, grades, attendance, and contact details. It typically includes features like secure login, the ability to add, edit, delete, and view student records, and search or filter functionality to easily access data. The system enhances administrative efficiency by reducing paperwork and enabling quick, centralized access to academic information. Built using technologies like HTML, CSS, JavaScript for the frontend and optionally PHP, Python, or Node.js for the backend with a database like MySQL or Firebase, it can be hosted online or locally, depending on whether dynamic data handling is needed.
+        </p>
+        <center>
+            <a href=" https://nishanthinisankar.github.io/Student-Database-system/" target="_blank">
+                <button type="button">Visit</button>
+            </a>
+        </center>
+
+    </div>
+    <div class="embedded">
+        <img src="proj4.jpg" width="400px">
+        <h1 class="head">Multiobject detection using AI for Visionless people</h1>
+        <p class="para">
+            This project aims to develop a portable smart assistive system for visually impaired individuals, utilizing AI-based object detection techniques to recognize multiple objects in real-time and deliver audio feedback for enhanced spatial awareness.
+
+Using models like YOLOv5 (You Only Look Once), the system captures live video through a camera module, processes the feed to detect objects (e.g., people, vehicles, obstacles), converts the identified objects into textual data, and then into speech using a Text-to-Speech engine (TTS). The auditory output is delivered via an earphone or speaker, allowing the user to navigate safely and independently.
+        </p>
+        <center>
+            <a href="https://www.youtube.com/embed/jB7XCZh2c_U?si=7LUtyLJEKa7HSvOZ" target="_blank">
+                <button type="button">Visit</button>
+            </a>
+        </center>
+    </div>
+
+    <section id="certificates">
+        <h2>Certificates & Achievements</h2>
+        <div class="certi">
+            <h3>Learn Java</h3>
+            <p><strong>Issued by Codechef</strong></p>
+            <center>
+                <a href="c:\Users\nisha\OneDrive\Desktop\certificates\java certificate.pdf" target="_blank">
+                       <button type="button">View Certificate</button>
+                </a>
+            </center>
+        </div>
+
+        <div class="certi">
+            <h3>Introduction to Frontend Development</h3>
+            <p><strong>Issued by Simpli Learn</strong></p>
+            <center>
+                <a href="c:\Users\nisha\OneDrive\Desktop\certificates\Frontend Development certificate.pdf" target="_blank">
+                    <button type="button">View Certificate</button>
+                </a>
+            </center>
+        </div>
+
+        <div class="certi">
+            <h3>Internship Certification on Embedded System and Artificial Intelligence</h3>
+            <p><strong>Issued by the company National Small Industries Corporation</strong></p>
+            <center>
+                <a href="c:\Users\nisha\OneDrive\Desktop\certificates\nsic certificate.jpg" target="_blank">
+                    <button type="button">View Certificate</button>
+                </a>
+            </center>
+        </div>
+
+        <div class="certi">
+            <h3>Internship Certification on the domain Web Development</h3>
+            <p><strong>Issued by the company New Wings Technologies</strong></p>
+            <center>
+                <a href="c:\Users\nisha\OneDrive\Desktop\certificates\new wings certification.jpg" target="_blank">
+                    <button type="button">View Certificate</button>
+                </a>
+            </center>
+        </div>
+
+        <div class="certi">
+            <h3>Introduction to AI,ML and XR Applications</h3>
+            <p><strong>Issued by Eashwari Engineering College</strong></p>
+            <center>
+                <a href="c:\Users\nisha\OneDrive\Desktop\certificates\Ai ML Certificate.pdf" target="_blank">
+                    <button type="button">View Certificate</button>
+                </a>
+            </center>
+        </div>
+    </section>
+    <section id="Achievements">
+        <h2>Achievements</h2>
+        <div class="Codechef">
+            <h3>Codechef Problem Solver Golden Badge</h3>
+            <p><strong> Solved 500+ problems on CodeChef, demonstrating strong problem-solving and algorithmic thinking.</strong></p>
+            <center>
+                <a href="c:\Users\nisha\OneDrive\Desktop\certificates\CodeChefBadge.png">
+                    <button type="button">View Badge</button>
+                </a>
+            </center>
+        </div>
+    </section>
+
+    <section id="coding-profiles">
+  <h2>Coding Profiles</h2>
+  <div class="profile-links">
+    <a href="https://www.codechef.com/users/nisha50" target="_blank" class="profile-card codechef">
+      <i class="fa-solid fa-code"></i> CodeChef
+    </a>
+    <a href="https://leetcode.com/u/nishanthinisankar/" target="_blank" class="profile-card leetcode">
+      <i class="fa-solid fa-terminal"></i> LeetCode
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <div class="contact-info">
+    <p><i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/nishanthinisankar/" target="_blank" style="color: #FFA500;">LinkedIn</a>
+    </p>
+    <p><i class="fa-solid fa-envelope"></i>
+      <a href="mailto:nishanthinisankar24@gmail.com" style="color: #FFA500;">nishanthinisankar24@gmail.com</a>
+    </p>
+    <p><i class="fa-brands fa-github"></i>
+      <a href="https://github.com/NishanthiniSankar" target="_blank" style="color: #FFA500;">GitHub</a>
+    </p>
+  </div>
+</section>
+
+
+
+</div>
+</body>
+</html>  
